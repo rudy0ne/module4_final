@@ -1,0 +1,64 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="{% static  'css/bootstrap.min.css' %}">
+	<title>{% block title %}Online Store - Rudy's final{% endblock %}</title>
+	
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				
+				<a class="navbar-brand" href="#">Module 4 final <span style="font-size: 12px">(Rudy Martinez)</span></a>  
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+				<ul class="nav navbar-nav">
+					<li><a href="{% url 'member:registration' %}">Member Registration</a></li>
+					<li><a href="{% url 'order:order_create' %}">Create New Order</a></li>
+					<li><a href="{% url 'order:order_list' %}">List of all Orders</a></li>					
+				</ul>
+				
+
+					
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="{% url 'admin:index' %}">Admin</a></li>
+					<li><a href="{% url 'login' %}">Login</a></li>
+					<li><a href="{% url 'logout' %}">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+
+
+
+
+</head>
+<body>
+
+<div class="container">
+	
+
+	{% block header %} 
+	<h4></h4>
+	{% endblock %}
+
+	{% block content %} 
+	<h5></h5>
+	{% endblock %}
+
+	{% block footer %} 
+	<h5></h5>
+	{% endblock %}
+
+	
+
+</div>
+
+</body>
+</html>

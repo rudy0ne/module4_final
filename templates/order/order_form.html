@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<h4>create an order</h4>
+<br>
+
+<form method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit" class="btn btn-success">Save</button>
+	<a class="btn btn-warning" href="{% url 'order:order_list'%}">Cancel</a>
+
+</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<form method="post">
+	{% csrf_token %}
+	<h4>Are you sure you want to delete order #{{ order.id }} from {{ order.customer }}?</h4>
+	<button type="submit" class="btn btn-danger">Yes, delete it</button>
+	<a class="btn btn-warning" href="{% url 'order:order_list'%}">Cancel</a>
+
+</form>
+{% endblock %}
